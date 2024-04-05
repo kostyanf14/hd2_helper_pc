@@ -1,0 +1,72 @@
+syntax = "proto3";
+
+enum RequestType {
+    RT_NONE      = 0x0;
+    RT_BUTTON    = 0x1;
+    RT_STRATAGEM = 0x2;
+}
+
+enum ButtonId {
+    BTN_NONE      = 0x00;
+    BTN_LEFT      = 0x25;
+    BTN_UP        = 0x26;
+    BTN_RIGHT     = 0x27;
+    BTN_DOWN      = 0x28;
+    BTN_SELECT    = 0x29;
+    BTN_PRINT     = 0x2A;
+    BTN_EXECUTE   = 0x2B;
+    BTN_SNAPSHOT  = 0x2C;
+    BTN_INSERT    = 0x2D;
+    BTN_DELETE    = 0x2E;
+    BTN_HELP      = 0x2F;
+    BTN_KEY_0     = 0x30;
+    BTN_KEY_1     = 0x31;
+    BTN_KEY_2     = 0x32;
+    BTN_KEY_3     = 0x33;
+    BTN_KEY_4     = 0x34;
+    BTN_KEY_5     = 0x35;
+    BTN_KEY_6     = 0x36;
+    BTN_KEY_7     = 0x37;
+    BTN_KEY_8     = 0x38;
+    BTN_KEY_9     = 0x39;
+    BTN_KEY_A     = 0x41;
+    BTN_KEY_B     = 0x42;
+    BTN_KEY_C     = 0x43;
+    BTN_KEY_D     = 0x44;
+    BTN_KEY_E     = 0x45;
+    BTN_KEY_F     = 0x46;
+    BTN_KEY_G     = 0x47;
+    BTN_KEY_H     = 0x48;
+    BTN_KEY_I     = 0x49;
+    BTN_KEY_J     = 0x4A;
+    BTN_KEY_K     = 0x4B;
+    BTN_KEY_L     = 0x4C;
+    BTN_KEY_M     = 0x4D;
+    BTN_KEY_N     = 0x4E;
+    BTN_KEY_O     = 0x4F;
+    BTN_KEY_P     = 0x50;
+    BTN_KEY_Q     = 0x51;
+    BTN_KEY_R     = 0x52;
+    BTN_KEY_S     = 0x53;
+    BTN_KEY_T     = 0x54;
+    BTN_KEY_U     = 0x55;
+    BTN_KEY_V     = 0x56;
+    BTN_KEY_W     = 0x57;
+    BTN_KEY_X     = 0x58;
+    BTN_KEY_Y     = 0x59;
+    BTN_KEY_Z     = 0x5A;
+}
+
+enum StratagemId {
+    SG_NONE              = 0x00;
+    SG_TEST_AABC         = 0x01;
+    SG_TEST_ABLEFTCD     = 0x02;
+    SG_TEST_ABCLEFTD     = 0x03;
+}
+
+message Hd2Request {
+  int32 version = 1;
+  RequestType type = 2;
+  ButtonId button = 3;
+  StratagemId stratagem = 4;
+}
