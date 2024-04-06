@@ -38,4 +38,9 @@
       <Filter>Resource Files</Filter>
     </CustomBuild>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="KeyBind.yml">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>

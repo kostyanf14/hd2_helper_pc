@@ -1,0 +1,8 @@
+key_bind:
+    key_keys: https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
+    action: Press
+    activate: 0x11 # CTRL key
+    up: 0x38 # 8 key
+    left: 0x34 # 4 key
+    down: 0x35 # 5 key
+    right: 0x36 # 6 key
